@@ -1,0 +1,18 @@
+{
+  "name": "cz.xprees.events.editor",
+  "rootNamespace": "Xprees.Events",
+  "references": [
+    "GUID:18c15ac4829a4f5db34ce4aa0dd6e6de"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
