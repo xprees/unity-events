@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Xprees.Events.Listeners.Base;
 
-namespace Xprees.Events.Packages.cz.xprees.events.Editor.Core
+namespace Xprees.Events.Editor.Core
 {
     public abstract class EventListenerEditorBase<T> : UnityEditor.Editor
     {
