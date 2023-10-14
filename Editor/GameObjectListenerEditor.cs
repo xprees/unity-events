@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Xprees.Events.Packages.cz.xprees.events.Editor.Core;
+using Xprees.Events.Editor.Core;
 
 namespace Xprees.Events.Editor
 {

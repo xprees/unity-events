@@ -2,7 +2,7 @@
 using UnityEngine;
 using Xprees.Events.Listeners.Base;
 
-namespace Xprees.Events.Editor.Packages.cz.xprees.events.Editor.Core
+namespace Xprees.Events.Editor.Core
 {
     [CustomEditor(typeof(VoidEventListener))]
     public class VoidEventListenerEditor : UnityEditor.Editor
