@@ -26,6 +26,7 @@
     "url": "https://github.com/xprees/unity-events/issues"
   },
   "repository": {
-    "url": "https://github.com/xprees/unity-events"
+    "type": "git",
+    "url": "https://github.com/xprees/unity-events.git"
   }
 }
