@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Xprees.Events.Editor.Core;
 
 namespace Xprees.Events.Editor

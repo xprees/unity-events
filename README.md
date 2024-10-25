@@ -1,4 +1,4 @@
-﻿# ScriptableObject Event System
+# ScriptableObject Event System
 
 ## Usage
 
