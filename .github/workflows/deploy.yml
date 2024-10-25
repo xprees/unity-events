@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - release/*
+      - event-logging
 
 jobs:
   publish-gpr:
@@ -28,3 +29,4 @@ jobs:
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
           access: public
+          tag: ${{ github.ref_name }}
