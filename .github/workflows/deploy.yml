@@ -30,3 +30,5 @@ jobs:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
           access: public
           tag: ${{ github.ref_name }}
+          ignore-scripts: true
+
