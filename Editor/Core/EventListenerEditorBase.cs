@@ -16,7 +16,9 @@ namespace Xprees.Events.Editor.Core
             var prevState = GUI.enabled;
             GUI.enabled = enabled;
 
-            var listener = (EventListenerBase<T>) target;
+            var listener = target as EventListenerBase<T>;
+            if (!listener) return;
+
             if (GUILayout.Button("Invoke Event with test data"))
             {
                 listener.onEventRaised?.Invoke(GetTestData());
