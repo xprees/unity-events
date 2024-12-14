@@ -2,7 +2,9 @@
   "name": "cz.xprees.events.editor",
   "rootNamespace": "Xprees.Events",
   "references": [
-    "GUID:18c15ac4829a4f5db34ce4aa0dd6e6de"
+    "GUID:18c15ac4829a4f5db34ce4aa0dd6e6de",
+    "GUID:19bcd25207254b86a83916ac73316140",
+    "GUID:f88fb04354076c646a4107a491394033"
   ],
   "includePlatforms": [
     "Editor"

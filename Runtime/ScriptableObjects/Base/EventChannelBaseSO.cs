@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using NaughtyAttributes;
+using UnityEngine;
 using UnityEngine.Events;
 using Xprees.Core;
 using Xprees.EventLogging.ScriptableObjects;
@@ -7,7 +8,6 @@ using Xprees.Variables.Reference.Primitive;
 
 namespace Xprees.Events.ScriptableObjects.Base
 {
-    // TODO custom editor which will hide event logging if not allowed
     /// <summary>
     /// Base class for all events channels with one parameter that are used in the game.
     /// </summary>
@@ -27,8 +27,11 @@ namespace Xprees.Events.ScriptableObjects.Base
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
+        [ShowIf(nameof(enableEventLogging))]
         public EventLoggingEventChannel addLogEvent;
 
+        [ShowIf(nameof(enableEventLogging))]
+        [Label("Event Name (Required)")]
         [Tooltip("Required. Use unique name for each event.")]
         public StringReference eventName;
 
@@ -70,8 +73,11 @@ namespace Xprees.Events.ScriptableObjects.Base
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
+        [ShowIf(nameof(enableEventLogging))]
         public EventLoggingEventChannel addLogEvent;
 
+        [ShowIf(nameof(enableEventLogging))]
+        [Label("Event Name (Required)")]
         [Tooltip("Required. Use unique name for each event.")]
         public StringReference eventName;
 
@@ -114,8 +120,11 @@ namespace Xprees.Events.ScriptableObjects.Base
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
+        [ShowIf(nameof(enableEventLogging))]
         public EventLoggingEventChannel addLogEvent;
 
+        [ShowIf(nameof(enableEventLogging))]
+        [Label("Event Name (Required)")]
         [Tooltip("Required. Use unique name for each event.")]
         public StringReference eventName;
 
