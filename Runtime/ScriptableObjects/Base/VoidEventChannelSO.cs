@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using NaughtyAttributes;
+using UnityEngine;
 using UnityEngine.Events;
 using Xprees.Core;
 using Xprees.EventLogging.ScriptableObjects;
@@ -23,11 +24,15 @@ namespace Xprees.Events.ScriptableObjects.Base
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
+        [ShowIf(nameof(enableEventLogging))]
         public EventLoggingEventChannel addLogEvent;
 
+        [ShowIf(nameof(enableEventLogging))]
+        [Label("Event Name (Required)")]
         [Tooltip("Required. Use unique name for each event.")]
         public StringReference eventName;
 
+        [ShowIf(nameof(enableEventLogging))]
         [Tooltip("Not required. Use to add additional data to the event.")]
         public StringReference eventData = null;
 
