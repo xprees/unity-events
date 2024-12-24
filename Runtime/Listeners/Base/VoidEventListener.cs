@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using NaughtyAttributes;
+using UnityEngine;
 using UnityEngine.Events;
 using Xprees.Events.ScriptableObjects.Base;
 
@@ -24,6 +25,7 @@ namespace Xprees.Events.Listeners.Base
             voidGameEvent.onEventRaised -= Respond;
         }
 
+        [Button("Invoke Event", EButtonEnableMode.Playmode)]
         public void Respond() => onEventRaised?.Invoke();
     }
 }
