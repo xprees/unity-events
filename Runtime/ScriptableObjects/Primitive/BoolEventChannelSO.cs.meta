@@ -1,3 +1,12 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: f2db5e6e1c824bcdb9e11e2bf5a3eb40
-timeCreated: 1669396185
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - addLogEvent: {fileID: 11400000, guid: 5ce417186a4b3a444ae9a8b5b2ceaeaa, type: 2}
+  executionOrder: 0
+  icon: {fileID: 6192944022281365145, guid: be704df36165f9945b7851ebeb5cd2a3, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
