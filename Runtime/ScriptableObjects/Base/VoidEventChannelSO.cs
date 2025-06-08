@@ -1,10 +1,12 @@
-﻿using NaughtyAttributes;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using Xprees.Core;
+#if XPREES_EVENT_LOGGING
+using NaughtyAttributes;
+using Xprees.Variables.Reference.Primitive;
 using Xprees.EventLogging.ScriptableObjects;
 using Xprees.Events.ScriptableObjects.EventLogging;
-using Xprees.Variables.Reference.Primitive;
+#endif
 
 namespace Xprees.Events.ScriptableObjects.Base
 {
@@ -15,9 +17,13 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent()
         {
+#if XPREES_EVENT_LOGGING
             if (enableEventLogging) LogData();
+#endif
             onEventRaised?.Invoke();
         }
+
+#if XPREES_EVENT_LOGGING
 
         #region Event Logging
 
@@ -48,6 +54,8 @@ namespace Xprees.Events.ScriptableObjects.Base
         }
 
         #endregion
+
+#endif
 
     }
 }

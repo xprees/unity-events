@@ -1,23 +1,44 @@
-# ScriptableObject Event System
+# Unity Event System based on ScriptableObjects
+
+[![NPM Version](https://img.shields.io/npm/v/cz.xprees.events)](https://www.npmjs.com/package/cz.xprees.events)
+
+This package provides a simple and powerful event system for Unity using ScriptableObject EventChannels. It allows you to create and receive events
+across different parts of your game without tightly coupling components and even in multi-scene environment.
 
 ## Usage
 
 To use in Unity clone with following git url to package
 manager.
 
-- Version without event-logging is in `master` branch
+## Installation
 
-    ```git
-    https://github.com/xprees/Unity-Events.git
-    ```
+Install the package using one of the following methods:
 
-- Version with event-logging is in `event-logging` branch.
+### Git URL
 
-    ```git
-    https://github.com/xprees/Unity-Events.git#event-logging
-    ```
-  You will also need second package `cz.xprees.event-logging`
-  which is in this repository with following url.
-  ```git
-  https://github.com/xprees/Unity-Event-Logging.git
-  ```
+Install in the package manager using the following Git URL
+
+```git
+https://github.com/xprees/Unity-Events.git
+```
+
+### Scoped NPM Registry
+
+Install the package using npm scoped registry in Project Settings > Package Manager > Scoped Registries
+
+```json
+{
+    "name": "NPM - xprees",
+    "url": "https://registry.npmjs.org",
+    "scopes": [
+        "cz.xprees"
+    ]
+}
+```
+
+Then simply install the package using the Unity Package Manager using the NPM - xprees scope or by the package name `cz.xprees.events`.
+
+## Event Logging
+
+The package will automatically enable event-logging capabilities when detects the Script Define Symbol `XPREES_EVENT_LOGGING` from
+[`cz.xprees.event-logging`](https://www.npmjs.com/package/cz.xprees.event-logging) package.
