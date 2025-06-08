@@ -1,10 +1,12 @@
-﻿using NaughtyAttributes;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 using Xprees.Core;
+#if XPREES_EVENT_LOGGING
+using NaughtyAttributes;
+using UnityEngine;
+using Xprees.Variables.Reference.Primitive;
 using Xprees.EventLogging.ScriptableObjects;
 using Xprees.Events.ScriptableObjects.EventLogging;
-using Xprees.Variables.Reference.Primitive;
+#endif
 
 namespace Xprees.Events.ScriptableObjects.Base
 {
@@ -18,12 +20,16 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent(T value)
         {
+#if XPREES_EVENT_LOGGING
             if (enableEventLogging) LogData(value);
+#endif
             onEventRaised?.Invoke(value);
         }
 
+
         #region Event Logging
 
+#if XPREES_EVENT_LOGGING
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
@@ -46,10 +52,12 @@ namespace Xprees.Events.ScriptableObjects.Base
             addLogEvent.RaiseEvent(eventLog);
         }
 
+#endif
         /// Allows to override the event data provided for logging. Provide specific data for your event.
         protected virtual string GetEventData(T value) => null;
 
         #endregion
+
 
     }
 
@@ -64,12 +72,15 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent(T1 firstValue, T2 secondValue)
         {
+#if XPREES_EVENT_LOGGING
             if (enableEventLogging) LogData(firstValue, secondValue);
+#endif
             onEventRaised?.Invoke(firstValue, secondValue);
         }
 
         #region Event Logging
 
+#if XPREES_EVENT_LOGGING
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
@@ -91,6 +102,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
             addLogEvent.RaiseEvent(eventLog);
         }
+#endif
 
         /// Allows to override the event data provided for logging. Provide specific data for your event.
         protected virtual string GetEventData(T1 firstValue, T2 secondValue) => null;
@@ -111,12 +123,15 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent(T1 firstValue, T2 secondValue, T3 thirdValue)
         {
+#if XPREES_EVENT_LOGGING
             if (enableEventLogging) LogData(firstValue, secondValue, thirdValue);
+#endif
             onEventRaised?.Invoke(firstValue, secondValue, thirdValue);
         }
 
         #region Event Logging
 
+#if XPREES_EVENT_LOGGING
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
@@ -138,6 +153,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
             addLogEvent.RaiseEvent(eventLog);
         }
+#endif
 
         /// Allows to override the event data provided for logging. Provide specific data for your event.
         protected virtual string GetEventData(T1 firstValue, T2 secondValue, T3 thirdValue) => null;
