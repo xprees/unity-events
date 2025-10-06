@@ -24,14 +24,22 @@ https://github.com/xprees/Unity-Events.git
 
 ### Scoped NPM Registry
 
-Install the package using npm scoped registry in Project Settings > Package Manager > Scoped Registries
+Install the package using npm scoped registry in `Project Settings > Package Manager > Scoped Registries` (For more details
+see [Unity Docs - Use a scoped registry in your project](https://docs.unity3d.com/6000.2/Documentation/Manual/upm-scoped-use.html))
+
+`Packages/manifest.json`
 
 ```json
 {
-    "name": "NPM - xprees",
-    "url": "https://registry.npmjs.org",
-    "scopes": [
-        "cz.xprees"
+    "scopedRegistries": [
+        {
+            "name": "NPM - xprees",
+            "url": "https://registry.npmjs.org",
+            "scopes": [
+                "cz.xprees",
+                "com.dbrizov.naughtyattributes"
+            ]
+        }
     ]
 }
 ```
