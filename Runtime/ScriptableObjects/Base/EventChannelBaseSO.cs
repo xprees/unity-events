@@ -14,6 +14,7 @@ namespace Xprees.Events.ScriptableObjects.Base
     /// Base class for all events channels with one parameter that are used in the game.
     /// </summary>
     /// <typeparam name="T">Unity Serializable</typeparam>
+    [StatefulLifetime(StateLifetime.Persistent)]
     public class EventChannelBaseSO<T> : DescriptionBaseSO
     {
         public UnityAction<T> onEventRaised;
@@ -66,6 +67,7 @@ namespace Xprees.Events.ScriptableObjects.Base
     /// </summary>
     /// <typeparam name="T1">Unity Serializable</typeparam>
     /// <typeparam name="T2">Unity Serializable</typeparam>
+    [StatefulLifetime(StateLifetime.Persistent)]
     public class EventChannelBaseSO<T1, T2> : DescriptionBaseSO
     {
         public UnityAction<T1, T2> onEventRaised;
@@ -117,6 +119,7 @@ namespace Xprees.Events.ScriptableObjects.Base
     /// <typeparam name="T1">Unity Serializable</typeparam>
     /// <typeparam name="T2">Unity Serializable</typeparam>
     /// <typeparam name="T3">Unity Serializable</typeparam>
+    [StatefulLifetime(StateLifetime.Persistent)]
     public class EventChannelBaseSO<T1, T2, T3> : DescriptionBaseSO
     {
         public UnityAction<T1, T2, T3> onEventRaised;

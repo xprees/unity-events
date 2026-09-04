@@ -11,6 +11,7 @@ using Xprees.Events.ScriptableObjects.EventLogging;
 namespace Xprees.Events.ScriptableObjects.Base
 {
     [CreateAssetMenu(menuName = "Events/Void Event", fileName = "VoidEvent", order = -1)]
+    [StatefulLifetime(StateLifetime.Persistent)]
     public class VoidEventChannelSO : DescriptionBaseSO
     {
         public UnityAction onEventRaised;
