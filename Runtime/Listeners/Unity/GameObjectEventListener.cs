@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Xprees.Events.Listeners.Base;
 
 namespace Xprees.Events.Listeners.Unity
