@@ -34,10 +34,10 @@ namespace Xprees.Events.ScriptableObjects.Base
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
-        [ShowIf(nameof(enableEventLogging))]
+        [ShowIf(nameof(enableEventLogging)), AllowNesting]
         public EventLoggingEventChannel addLogEvent;
 
-        [ShowIf(nameof(enableEventLogging))]
+        [ShowIf(nameof(enableEventLogging)), AllowNesting]
         [Label("Event Name (Required)")]
         [Tooltip("Required. Use unique name for each event.")]
         public StringReference eventName;
@@ -86,10 +86,10 @@ namespace Xprees.Events.ScriptableObjects.Base
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
-        [ShowIf(nameof(enableEventLogging))]
+        [ShowIf(nameof(enableEventLogging)), AllowNesting]
         public EventLoggingEventChannel addLogEvent;
 
-        [ShowIf(nameof(enableEventLogging))]
+        [ShowIf(nameof(enableEventLogging)), AllowNesting]
         [Label("Event Name (Required)")]
         [Tooltip("Required. Use unique name for each event.")]
         public StringReference eventName;
@@ -138,10 +138,10 @@ namespace Xprees.Events.ScriptableObjects.Base
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
-        [ShowIf(nameof(enableEventLogging))]
+        [ShowIf(nameof(enableEventLogging)), AllowNesting]
         public EventLoggingEventChannel addLogEvent;
 
-        [ShowIf(nameof(enableEventLogging))]
+        [ShowIf(nameof(enableEventLogging)), AllowNesting]
         [Label("Event Name (Required)")]
         [Tooltip("Required. Use unique name for each event.")]
         public StringReference eventName;
