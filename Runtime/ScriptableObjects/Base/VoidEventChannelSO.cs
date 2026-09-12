@@ -11,10 +11,13 @@ using Xprees.Events.ScriptableObjects.EventLogging;
 namespace Xprees.Events.ScriptableObjects.Base
 {
     [CreateAssetMenu(menuName = "Events/Void Event", fileName = "VoidEvent", order = -1)]
+    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
     [StatefulLifetime(StateLifetime.Persistent)]
-    public class VoidEventChannelSO : DescriptionBaseSO
+    public class VoidEventChannelSO : DescriptionBaseSO, IRuntimeStateOwner
     {
         public UnityAction onEventRaised;
+
+        public void ClearTransientState() => onEventRaised = null;
 
         public void RaiseEvent()
         {

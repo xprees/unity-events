@@ -10,14 +10,15 @@ using Xprees.Events.ScriptableObjects.EventLogging;
 
 namespace Xprees.Events.ScriptableObjects.Base
 {
-    /// <summary>
     /// Base class for all events channels with one parameter that are used in the game.
-    /// </summary>
     /// <typeparam name="T">Unity Serializable</typeparam>
+    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
     [StatefulLifetime(StateLifetime.Persistent)]
-    public class EventChannelBaseSO<T> : DescriptionBaseSO
+    public class EventChannelBaseSO<T> : DescriptionBaseSO, IRuntimeStateOwner
     {
         public UnityAction<T> onEventRaised;
+
+        public void ClearTransientState() => onEventRaised = null;
 
         public void RaiseEvent(T value)
         {
@@ -62,15 +63,16 @@ namespace Xprees.Events.ScriptableObjects.Base
 
     }
 
-    /// <summary>
     /// Base class for all events channels with two parameters that are used in the game.
-    /// </summary>
     /// <typeparam name="T1">Unity Serializable</typeparam>
     /// <typeparam name="T2">Unity Serializable</typeparam>
+    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
     [StatefulLifetime(StateLifetime.Persistent)]
-    public class EventChannelBaseSO<T1, T2> : DescriptionBaseSO
+    public class EventChannelBaseSO<T1, T2> : DescriptionBaseSO, IRuntimeStateOwner
     {
         public UnityAction<T1, T2> onEventRaised;
+
+        public void ClearTransientState() => onEventRaised = null;
 
         public void RaiseEvent(T1 firstValue, T2 secondValue)
         {
@@ -113,16 +115,17 @@ namespace Xprees.Events.ScriptableObjects.Base
 
     }
 
-    /// <summary>
-    /// Base class for all events channels with two parameters that are used in the game.
-    /// </summary>
+    /// Base class for all events channels with three parameters that are used in the game.
     /// <typeparam name="T1">Unity Serializable</typeparam>
     /// <typeparam name="T2">Unity Serializable</typeparam>
     /// <typeparam name="T3">Unity Serializable</typeparam>
+    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
     [StatefulLifetime(StateLifetime.Persistent)]
-    public class EventChannelBaseSO<T1, T2, T3> : DescriptionBaseSO
+    public class EventChannelBaseSO<T1, T2, T3> : DescriptionBaseSO, IRuntimeStateOwner
     {
         public UnityAction<T1, T2, T3> onEventRaised;
+
+        public void ClearTransientState() => onEventRaised = null;
 
         public void RaiseEvent(T1 firstValue, T2 secondValue, T3 thirdValue)
         {
