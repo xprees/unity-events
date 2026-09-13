@@ -11,7 +11,7 @@ using Xprees.Events.ScriptableObjects.EventLogging;
 namespace Xprees.Events.ScriptableObjects.Base
 {
     [CreateAssetMenu(menuName = "Events/Void Event", fileName = "VoidEvent", order = -1)]
-    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
+    // [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)] // With domain reload off SOs cannot resubscribe efficiently
     [StatefulLifetime(StateLifetime.Persistent)]
     public class VoidEventChannelSO : DescriptionBaseSO, IRuntimeStateOwner
     {

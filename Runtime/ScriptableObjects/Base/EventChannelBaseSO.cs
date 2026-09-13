@@ -12,7 +12,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 {
     /// Base class for all events channels with one parameter that are used in the game.
     /// <typeparam name="T">Unity Serializable</typeparam>
-    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
+    // [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)] // With domain reload off SOs cannot resubscribe efficiently
     [StatefulLifetime(StateLifetime.Persistent)]
     public class EventChannelBaseSO<T> : DescriptionBaseSO, IRuntimeStateOwner
     {
@@ -66,7 +66,7 @@ namespace Xprees.Events.ScriptableObjects.Base
     /// Base class for all events channels with two parameters that are used in the game.
     /// <typeparam name="T1">Unity Serializable</typeparam>
     /// <typeparam name="T2">Unity Serializable</typeparam>
-    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
+    // [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)] // With domain reload off SOs cannot resubscribe efficiently
     [StatefulLifetime(StateLifetime.Persistent)]
     public class EventChannelBaseSO<T1, T2> : DescriptionBaseSO, IRuntimeStateOwner
     {
@@ -119,7 +119,7 @@ namespace Xprees.Events.ScriptableObjects.Base
     /// <typeparam name="T1">Unity Serializable</typeparam>
     /// <typeparam name="T2">Unity Serializable</typeparam>
     /// <typeparam name="T3">Unity Serializable</typeparam>
-    [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)]
+    // [ResetOnPlayMode(PlayModeResetTiming.ExitPlayMode)] // With domain reload off SOs cannot resubscribe efficiently
     [StatefulLifetime(StateLifetime.Persistent)]
     public class EventChannelBaseSO<T1, T2, T3> : DescriptionBaseSO, IRuntimeStateOwner
     {
