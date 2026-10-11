@@ -1,6 +1,6 @@
 ﻿using UnityEngine.Events;
 using Xprees.Core;
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
 using NaughtyAttributes;
 using UnityEngine;
 using Xprees.Variables.Reference.Primitive;
@@ -22,7 +22,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent(T value)
         {
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
             if (enableEventLogging) LogData(value);
 #endif
             onEventRaised?.Invoke(value);
@@ -31,7 +31,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         #region Event Logging
 
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
@@ -76,7 +76,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent(T1 firstValue, T2 secondValue)
         {
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
             if (enableEventLogging) LogData(firstValue, secondValue);
 #endif
             onEventRaised?.Invoke(firstValue, secondValue);
@@ -84,7 +84,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         #region Event Logging
 
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 
@@ -129,7 +129,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent(T1 firstValue, T2 secondValue, T3 thirdValue)
         {
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
             if (enableEventLogging) LogData(firstValue, secondValue, thirdValue);
 #endif
             onEventRaised?.Invoke(firstValue, secondValue, thirdValue);
@@ -137,7 +137,7 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         #region Event Logging
 
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
         [Header("Event Logging")]
         public bool enableEventLogging = false;
 

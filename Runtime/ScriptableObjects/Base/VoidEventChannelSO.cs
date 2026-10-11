@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using Xprees.Core;
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
 using NaughtyAttributes;
 using Xprees.Variables.Reference.Primitive;
 using Xprees.EventLogging.ScriptableObjects;
@@ -21,13 +21,13 @@ namespace Xprees.Events.ScriptableObjects.Base
 
         public void RaiseEvent()
         {
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
             if (enableEventLogging) LogData();
 #endif
             onEventRaised?.Invoke();
         }
 
-#if XPREES_EVENT_LOGGING
+#if XPREES_EVENT_LOGGING || OG_ANALYTICS_V1
 
         #region Event Logging
 

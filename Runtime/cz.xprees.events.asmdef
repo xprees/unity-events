@@ -15,6 +15,12 @@
   "precompiledReferences": [],
   "autoReferenced": true,
   "defineConstraints": [],
-  "versionDefines": [],
+  "versionDefines": [
+    {
+      "name": "cz.xprees.event-logging",
+      "expression": "2.0.0",
+      "define": "OG_ANALYTICS_V1"
+    }
+  ],
   "noEngineReferences": false
 }
